@@ -1,0 +1,206 @@
+collect_function <- function(info) {
+
+
+  state = data.frame(
+    inc_year_gii4_1 = info$inc_year_gii4[1,],
+    inc_year_gii4_2 = info$inc_year_gii4[2,],
+    inc_year_gii4_3 = info$inc_year_gii4[3,],
+    inc_year_gii4_4 = info$inc_year_gii4[4,],
+    inc_year_gii4_5 = info$inc_year_gii4[5,],
+    
+    inc_year_gii_1 = info$inc_year_gii[1,],
+    inc_year_gii_2 = info$inc_year_gii[2,],
+    inc_year_gii_3 = info$inc_year_gii[3,],
+    inc_year_gii_4 = info$inc_year_gii[4,],
+    inc_year_gii_5 = info$inc_year_gii[5,],
+    
+    inc_year_gi3_1 = info$inc_year_gi3[1,],
+    inc_year_gi3_2 = info$inc_year_gi3[2,],
+    inc_year_gi3_3 = info$inc_year_gi3[3,],
+    inc_year_gi3_4 = info$inc_year_gi3[4,],
+    inc_year_gi3_5 = info$inc_year_gi3[5,],
+    
+    inc_year_gi_1 = info$inc_year_gi[1,],
+    inc_year_gi_2 = info$inc_year_gi[2,],
+    inc_year_gi_3 = info$inc_year_gi[3,],
+    inc_year_gi_4 = info$inc_year_gi[4,],
+    inc_year_gi_5 = info$inc_year_gi[5,],
+    
+    inc_day_gii4_1 = info$inc_day_gii4[1,],
+    inc_day_gii4_2 = info$inc_day_gii4[2,],
+    inc_day_gii4_3 = info$inc_day_gii4[3,],
+    inc_day_gii4_4 = info$inc_day_gii4[4,],
+    inc_day_gii4_5 = info$inc_day_gii4[5,],
+    
+    inc_day_gii_1 = info$inc_day_gii[1,],
+    inc_day_gii_2 = info$inc_day_gii[2,],
+    inc_day_gii_3 = info$inc_day_gii[3,],
+    inc_day_gii_4 = info$inc_day_gii[4,],
+    inc_day_gii_5 = info$inc_day_gii[5,],
+    
+    inc_day_gi3_1 = info$inc_day_gi3[1,],
+    inc_day_gi3_2 = info$inc_day_gi3[2,],
+    inc_day_gi3_3 = info$inc_day_gi3[3,],
+    inc_day_gi3_4 = info$inc_day_gi3[4,],
+    inc_day_gi3_5 = info$inc_day_gi3[5,],
+    
+    inc_day_gi_1 = info$inc_day_gi[1,],
+    inc_day_gi_2 = info$inc_day_gi[2,],
+    inc_day_gi_3 = info$inc_day_gi[3,],
+    inc_day_gi_4 = info$inc_day_gi[4,],
+    inc_day_gi_5 = info$inc_day_gi[5,],
+    
+    
+    pop_by4age1 = info$pop_by4age[1,],
+    pop_by4age2 = info$pop_by4age[2,],
+    pop_by4age3 = info$pop_by4age[3,],
+    pop_by4age4 = info$pop_by4age[4,],
+    pop_by4age5 = info$pop_by4age[5,],
+    
+    cumm_incday_gii4_1 = info$infections_day_gii4[1,],
+    cumm_incday_gii4_2 = info$infections_day_gii4[2,],
+    cumm_incday_gii4_3 = info$infections_day_gii4[3,],
+    cumm_incday_gii4_4 = info$infections_day_gii4[4,],
+    
+    cumm_incday_gii_1 = info$infections_day_gii[1,],
+    cumm_incday_gii_2 = info$infections_day_gii[2,],
+    cumm_incday_gii_3 = info$infections_day_gii[3,],
+    cumm_incday_gii_4 = info$infections_day_gii[4,],
+    
+    cumm_incday_gi3_1 = info$infections_day_gi3[1,],
+    cumm_incday_gi3_2 = info$infections_day_gi3[2,],
+    cumm_incday_gi3_3 = info$infections_day_gi3[3,],
+    cumm_incday_gi3_4 = info$infections_day_gi3[4,],
+    
+    cumm_incday_gi_1 = info$infections_day_gi[1,],
+    cumm_incday_gi_2 = info$infections_day_gi[2,],
+    cumm_incday_gi_3 = info$infections_day_gi[3,],
+    cumm_incday_gi_4 = info$infections_day_gi[4,],
+    
+    inc_gii4_1 = info$inc_day_all_gii4[1,],
+    inc_gii4_2 = info$inc_day_all_gii4[2,],
+    inc_gii4_3 = info$inc_day_all_gii4[3,],
+    inc_gii4_4 = info$inc_day_all_gii4[4,],
+    inc_gii4_5 = info$inc_day_all_gii4[5,],
+    inc_gii4_6 = info$inc_day_all_gii4[6,],
+    inc_gii4_7 = info$inc_day_all_gii4[7,],
+    inc_gii4_8 = info$inc_day_all_gii4[8,],
+    inc_gii4_9 = info$inc_day_all_gii4[9,],
+    inc_gii4_10 = info$inc_day_all_gii4[10,],
+    inc_gii4_11 = info$inc_day_all_gii4[11,],
+    inc_gii4_12 = info$inc_day_all_gii4[12,],
+    inc_gii4_13 = info$inc_day_all_gii4[13,],
+    inc_gii4_14 = info$inc_day_all_gii4[14,],
+    
+    inc_gii_1 = info$inc_day_all_gii[1,],
+    inc_gii_2 = info$inc_day_all_gii[2,],
+    inc_gii_3 = info$inc_day_all_gii[3,],
+    inc_gii_4 = info$inc_day_all_gii[4,],
+    inc_gii_5 = info$inc_day_all_gii[5,],
+    inc_gii_6 = info$inc_day_all_gii[6,],
+    inc_gii_7 = info$inc_day_all_gii[7,],
+    inc_gii_8 = info$inc_day_all_gii[8,],
+    inc_gii_9 = info$inc_day_all_gii[9,],
+    inc_gii_10 = info$inc_day_all_gii[10,],
+    inc_gii_11 = info$inc_day_all_gii[11,],
+    inc_gii_12 = info$inc_day_all_gii[12,],
+    inc_gii_13 = info$inc_day_all_gii[13,],
+    inc_gii_14 = info$inc_day_all_gii[14,],
+    
+    inc_gi3_1 = info$inc_day_all_gi3[1,],
+    inc_gi3_2 = info$inc_day_all_gi3[2,],
+    inc_gi3_3 = info$inc_day_all_gi3[3,],
+    inc_gi3_4 = info$inc_day_all_gi3[4,],
+    inc_gi3_5 = info$inc_day_all_gi3[5,],
+    inc_gi3_6 = info$inc_day_all_gi3[6,],
+    inc_gi3_7 = info$inc_day_all_gi3[7,],
+    inc_gi3_8 = info$inc_day_all_gi3[8,],
+    inc_gi3_9 = info$inc_day_all_gi3[9,],
+    inc_gi3_10 = info$inc_day_all_gi3[10,],
+    inc_gi3_11 = info$inc_day_all_gi3[11,],
+    inc_gi3_12 = info$inc_day_all_gi3[12,],
+    inc_gi3_13 = info$inc_day_all_gi3[13,],
+    inc_gi3_14 = info$inc_day_all_gi3[14,],
+    
+    inc_gi_1 = info$inc_day_all_gi[1,],
+    inc_gi_2 = info$inc_day_all_gi[2,],
+    inc_gi_3 = info$inc_day_all_gi[3,],
+    inc_gi_4 = info$inc_day_all_gi[4,],
+    inc_gi_5 = info$inc_day_all_gi[5,],
+    inc_gi_6 = info$inc_day_all_gi[6,],
+    inc_gi_7 = info$inc_day_all_gi[7,],
+    inc_gi_8 = info$inc_day_all_gi[8,],
+    inc_gi_9 = info$inc_day_all_gi[9,],
+    inc_gi_10 = info$inc_day_all_gi[10,],
+    inc_gi_11 = info$inc_day_all_gi[11,],
+    inc_gi_12 = info$inc_day_all_gi[12,],
+    inc_gi_13 = info$inc_day_all_gi[13,],
+    inc_gi_14 = info$inc_day_all_gi[14,],
+    
+    
+    
+    reported_wk_1 = info$reported_wk[1,],
+    reported_wk_2 = info$reported_wk[2,],
+    reported_wk_3 = info$reported_wk[3,],
+    reported_wk_4 = info$reported_wk[4,],
+    reported_wk_5 = info$reported_wk[5,],
+    reported_wk_6 = info$reported_wk[6,],
+    reported_wk_7 = info$reported_wk[7,],
+    reported_wk_8 = info$reported_wk[8,],
+    reported_wk_9 = info$reported_wk[9,],
+    reported_wk_10 = info$reported_wk[10,],
+    reported_wk_11 = info$reported_wk[11,],
+    reported_wk_12 = info$reported_wk[12,],
+    reported_wk_13 = info$reported_wk[13,],
+    reported_wk_14 = info$reported_wk[14,],
+    
+    reported_wk_gi3 = info$reported_wk_gi3,
+    reported_wk_gi = info$reported_wk_gi,
+    reported_wk_gii4 = info$reported_wk_gii4,
+    reported_wk_gii = info$reported_wk_gii,
+    
+    
+    seroprev1.2 = info$seroprev_gii4[2,],
+    seroprev2.3 = info$seroprev_gii4[3,],
+    seroprev3.4 = info$seroprev_gii4[4,],
+    seroprev4.5 = info$seroprev_gii4[5,],
+    seroprev5.6 = info$seroprev_gii4[6,],
+    seroprev6.7 = info$seroprev_gii4[7,],
+    
+   
+    pop_all1     = info$pop_all[1,],
+    pop_all2     = info$pop_all[2,],
+    pop_all3     = info$pop_all[3,],
+    pop_all4     = info$pop_all[4,],
+    pop_all5     = info$pop_all[5,],
+    pop_all6     = info$pop_all[6,],
+    pop_all7     = info$pop_all[7,],
+    pop_all8     = info$pop_all[8,],
+    pop_all9     = info$pop_all[9,],
+    pop_all10     = info$pop_all[10,],
+    pop_all11     = info$pop_all[11,],
+    pop_all12     = info$pop_all[12,],
+    pop_all13     = info$pop_all[13,],
+    pop_all14     = info$pop_all[14,],
+    
+    sus_gi3_re = info$sus_re_gi3,  
+    sus_gi_re = info$sus_re_gi,
+    sus_gii4_re = info$sus_re_gii4,
+    sus_gii_re = info$sus_re_gii,
+    
+    sus_gi3   = info$sus_gi3,
+    sus_gi   = info$sus_gi,
+    sus_gii4   = info$sus_gii4,
+    sus_gii   = info$sus_gii,
+    
+    sus_gi3_cross   = info$sus_cross_gi3,
+    sus_gi_cross   = info$sus_cross_gi,
+    sus_gii4_cross   = info$sus_cross_gii4,
+    sus_gii_cross   = info$sus_cross_gii
+    
+    
+    )
+    
+
+
+}
