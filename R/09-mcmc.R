@@ -80,7 +80,7 @@ outfile2 <- file.path(root, "output", paste0("cov",model,".qs2"))
 nchains    <- 4
 
 niterations<- 100  
-use_last   <- TRUE # TRUE starts from previous run ans uses previous covmat 
+use_last   <- FALSE # TRUE starts from previous run ans uses previous covmat 
 start_mle  <- FALSE # instead of starting from last point, starts from MLE
 density    <- FALSE# Use cov of prevous chain or calc density
 size_adapt <- NULL # when to start proposal size adaptation (NULL is no adapt)
