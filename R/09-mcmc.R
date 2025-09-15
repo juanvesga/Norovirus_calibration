@@ -188,17 +188,19 @@ my_posterior<-posterior(compare_model,my_prior)
 
 
 #combine chains
-chains     <- qs_read(outfile) 
-covs       <- qs_read(outfile2)
-longchain<-do.call(rbind, chains)
-colnames(longchain)<-colnames(chains[[1]])
-
-mle<-which(longchain[,"logDensity"]==max(longchain[,"logDensity"]))[1]
-
-p_mle<-exp(longchain[mle,1:(ncol(chains[[1]])-1)])
 
 if (use_last){
+
+  chains     <- qs_read(outfile) 
+  covs       <- qs_read(outfile2)
+  longchain<-do.call(rbind, chains)
+  colnames(longchain)<-colnames(chains[[1]])
   
+  mle<-which(longchain[,"logDensity"]==max(longchain[,"logDensity"]))[1]
+  
+  p_mle<-exp(longchain[mle,1:(ncol(chains[[1]])-1)])
+  
+    
   if(start_mle){
     
     params<-rbind(

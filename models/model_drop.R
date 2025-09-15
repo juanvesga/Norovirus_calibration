@@ -2028,58 +2028,59 @@ noro_model <- odin({
   
   
   #Age in
-  n_ageiG[] <- if (i>1) Binomial(G[i-1] ,p_aging  [i-1]) else 0
-  n_ageiM[] <- if (i>1) Binomial(M[i-1] ,p_aging  [i-1]) else 0
-  n_ageiS[] <- if (i>1) Binomial(S[i-1] ,p_aging  [i-1]) else 0
-  n_ageiE[,] <- if (i>1) Binomial(E[i-1,j] , p_aging[i-1])else 0
-  n_ageiI[,] <- if (i>1) Binomial(I[i-1,j] , p_aging[i-1])else 0
-  n_ageiA[,] <- if (i>1) Binomial(A[i-1,j] , p_aging[i-1])else 0
-  n_ageiR[,] <- if (i>1) Binomial(R[i-1,j] , p_aging[i-1])else 0
-  n_ageiE1[,] <- if (i>1) Binomial(E1[i-1,j] , p_aging[i-1])else 0
-  n_ageiI1[,] <- if (i>1) Binomial(I1[i-1,j] , p_aging[i-1])else 0
-  n_ageiA1[,] <- if (i>1) Binomial(A1[i-1,j] , p_aging[i-1])else 0
-  n_ageiR1[,] <- if (i>1) Binomial(R1[i-1,j] , p_aging[i-1])else 0
-  n_ageiE2[,] <- if (i>1) Binomial(E2[i-1,j] , p_aging[i-1])else 0
-  n_ageiI2[,] <- if (i>1) Binomial(I2[i-1,j] , p_aging[i-1])else 0
-  n_ageiA2[,] <- if (i>1) Binomial(A2[i-1,j] , p_aging[i-1])else 0
-  n_ageiR2[,] <- if (i>1) Binomial(R2[i-1,j] , p_aging[i-1])else 0
-  n_ageiE3[,] <- if (i>1) Binomial(E3[i-1,j] , p_aging[i-1])else 0
-  n_ageiI3[,] <- if (i>1) Binomial(I3[i-1,j] , p_aging[i-1])else 0
-  n_ageiA3[,] <- if (i>1) Binomial(A3[i-1,j] , p_aging[i-1])else 0
-  n_ageiR3[,] <- if (i>1) Binomial(R3[i-1,j] , p_aging[i-1])else 0
-  n_ageiE4[,] <- if (i>1) Binomial(E4[i-1,j] , p_aging[i-1])else 0
-  n_ageiI4[,] <- if (i>1) Binomial(I4[i-1,j] , p_aging[i-1])else 0
-  n_ageiA4[,] <- if (i>1) Binomial(A4[i-1,j] , p_aging[i-1])else 0
-  n_ageiR4[,] <- if (i>1) Binomial(R4[i-1,j] , p_aging[i-1])else 0
-  n_ageiE12[,] <- if (i>1) Binomial(E12[i-1,j] , p_aging[i-1])else 0
-  n_ageiI12[,] <- if (i>1) Binomial(I12[i-1,j] , p_aging[i-1])else 0
-  n_ageiA12[,] <- if (i>1) Binomial(A12[i-1,j] , p_aging[i-1])else 0
-  n_ageiR12[,] <- if (i>1) Binomial(R12[i-1,j] , p_aging[i-1])else 0
-  n_ageiE13[,] <- if (i>1) Binomial(E13[i-1,j] , p_aging[i-1])else 0
-  n_ageiI13[,] <- if (i>1) Binomial(I13[i-1,j] , p_aging[i-1])else 0
-  n_ageiA13[,] <- if (i>1) Binomial(A13[i-1,j] , p_aging[i-1])else 0
-  n_ageiR13[,] <- if (i>1) Binomial(R13[i-1,j] , p_aging[i-1])else 0
-  n_ageiE14[,] <- if (i>1) Binomial(E14[i-1,j] , p_aging[i-1])else 0
-  n_ageiI14[,] <- if (i>1) Binomial(I14[i-1,j] , p_aging[i-1])else 0
-  n_ageiA14[,] <- if (i>1) Binomial(A14[i-1,j] , p_aging[i-1])else 0
-  n_ageiR14[,] <- if (i>1) Binomial(R14[i-1,j] , p_aging[i-1])else 0
-  n_ageiE23[,] <- if (i>1) Binomial(E23[i-1,j] , p_aging[i-1])else 0
-  n_ageiI23[,] <- if (i>1) Binomial(I23[i-1,j] , p_aging[i-1])else 0
-  n_ageiA23[,] <- if (i>1) Binomial(A23[i-1,j] , p_aging[i-1])else 0
-  n_ageiR23[,] <- if (i>1) Binomial(R23[i-1,j] , p_aging[i-1])else 0
-  n_ageiE24[,] <- if (i>1) Binomial(E24[i-1,j] , p_aging[i-1])else 0
-  n_ageiI24[,] <- if (i>1) Binomial(I24[i-1,j] , p_aging[i-1])else 0
-  n_ageiA24[,] <- if (i>1) Binomial(A24[i-1,j] , p_aging[i-1])else 0
-  n_ageiR24[,] <- if (i>1) Binomial(R24[i-1,j] , p_aging[i-1])else 0
-  n_ageiE34[,] <- if (i>1) Binomial(E34[i-1,j] , p_aging[i-1])else 0
-  n_ageiI34[,] <- if (i>1) Binomial(I34[i-1,j] , p_aging[i-1])else 0
-  n_ageiA34[,] <- if (i>1) Binomial(A34[i-1,j] , p_aging[i-1])else 0
-  n_ageiR34[,] <- if (i>1) Binomial(R34[i-1,j] , p_aging[i-1])else 0
-  n_ageiE4rd[,] <- if (i>1) Binomial(E4rd[i-1,j] , p_aging[i-1])else 0
-  n_ageiI4rd[,] <- if (i>1) Binomial(I4rd[i-1,j] , p_aging[i-1])else 0
-  n_ageiA4rd[,] <- if (i>1) Binomial(A4rd[i-1,j] , p_aging[i-1])else 0
-  n_ageiR4rd[,] <- if (i>1) Binomial(R4rd[i-1,j] , p_aging[i-1])else 0
   
+  n_ageiG[] <- if (i>1) Binomial(G[max(1,i-1)] ,p_aging  [max(1,i-1)]) else 0
+  n_ageiM[] <- if (i>1) Binomial(M[max(1,i-1)] ,p_aging  [max(1,i-1)]) else 0
+  n_ageiS[] <- if (i>1) Binomial(S[max(1,i-1)] ,p_aging  [max(1,i-1)]) else 0
+  n_ageiE[,] <- if (i>1) Binomial(E[max(1,i-1),j] , p_aging[max(1,i-1)])else 0
+  n_ageiI[,] <- if (i>1) Binomial(I[max(1,i-1),j] , p_aging[max(1,i-1)])else 0
+  n_ageiA[,] <- if (i>1) Binomial(A[max(1,i-1),j] , p_aging[max(1,i-1)])else 0
+  n_ageiR[,] <- if (i>1) Binomial(R[max(1,i-1),j] , p_aging[max(1,i-1)])else 0
+  n_ageiE1[,] <- if (i>1) Binomial(E1[max(1,i-1),j] , p_aging[max(1,i-1)])else 0
+  n_ageiI1[,] <- if (i>1) Binomial(I1[max(1,i-1),j] , p_aging[max(1,i-1)])else 0
+  n_ageiA1[,] <- if (i>1) Binomial(A1[max(1,i-1),j] , p_aging[max(1,i-1)])else 0
+  n_ageiR1[,] <- if (i>1) Binomial(R1[max(1,i-1),j] , p_aging[max(1,i-1)])else 0
+  n_ageiE2[,] <- if (i>1) Binomial(E2[max(1,i-1),j] , p_aging[max(1,i-1)])else 0
+  n_ageiI2[,] <- if (i>1) Binomial(I2[max(1,i-1),j] , p_aging[max(1,i-1)])else 0
+  n_ageiA2[,] <- if (i>1) Binomial(A2[max(1,i-1),j] , p_aging[max(1,i-1)])else 0
+  n_ageiR2[,] <- if (i>1) Binomial(R2[max(1,i-1),j] , p_aging[max(1,i-1)])else 0
+  n_ageiE3[,] <- if (i>1) Binomial(E3[max(1,i-1),j] , p_aging[max(1,i-1)])else 0
+  n_ageiI3[,] <- if (i>1) Binomial(I3[max(1,i-1),j] , p_aging[max(1,i-1)])else 0
+  n_ageiA3[,] <- if (i>1) Binomial(A3[max(1,i-1),j] , p_aging[max(1,i-1)])else 0
+  n_ageiR3[,] <- if (i>1) Binomial(R3[max(1,i-1),j] , p_aging[max(1,i-1)])else 0
+  n_ageiE4[,] <- if (i>1) Binomial(E4[max(1,i-1),j] , p_aging[max(1,i-1)])else 0
+  n_ageiI4[,] <- if (i>1) Binomial(I4[max(1,i-1),j] , p_aging[max(1,i-1)])else 0
+  n_ageiA4[,] <- if (i>1) Binomial(A4[max(1,i-1),j] , p_aging[max(1,i-1)])else 0
+  n_ageiR4[,] <- if (i>1) Binomial(R4[max(1,i-1),j] , p_aging[max(1,i-1)])else 0
+  n_ageiE12[,] <- if (i>1) Binomial(E12[max(1,i-1),j] , p_aging[max(1,i-1)])else 0
+  n_ageiI12[,] <- if (i>1) Binomial(I12[max(1,i-1),j] , p_aging[max(1,i-1)])else 0
+  n_ageiA12[,] <- if (i>1) Binomial(A12[max(1,i-1),j] , p_aging[max(1,i-1)])else 0
+  n_ageiR12[,] <- if (i>1) Binomial(R12[max(1,i-1),j] , p_aging[max(1,i-1)])else 0
+  n_ageiE13[,] <- if (i>1) Binomial(E13[max(1,i-1),j] , p_aging[max(1,i-1)])else 0
+  n_ageiI13[,] <- if (i>1) Binomial(I13[max(1,i-1),j] , p_aging[max(1,i-1)])else 0
+  n_ageiA13[,] <- if (i>1) Binomial(A13[max(1,i-1),j] , p_aging[max(1,i-1)])else 0
+  n_ageiR13[,] <- if (i>1) Binomial(R13[max(1,i-1),j] , p_aging[max(1,i-1)])else 0
+  n_ageiE14[,] <- if (i>1) Binomial(E14[max(1,i-1),j] , p_aging[max(1,i-1)])else 0
+  n_ageiI14[,] <- if (i>1) Binomial(I14[max(1,i-1),j] , p_aging[max(1,i-1)])else 0
+  n_ageiA14[,] <- if (i>1) Binomial(A14[max(1,i-1),j] , p_aging[max(1,i-1)])else 0
+  n_ageiR14[,] <- if (i>1) Binomial(R14[max(1,i-1),j] , p_aging[max(1,i-1)])else 0
+  n_ageiE23[,] <- if (i>1) Binomial(E23[max(1,i-1),j] , p_aging[max(1,i-1)])else 0
+  n_ageiI23[,] <- if (i>1) Binomial(I23[max(1,i-1),j] , p_aging[max(1,i-1)])else 0
+  n_ageiA23[,] <- if (i>1) Binomial(A23[max(1,i-1),j] , p_aging[max(1,i-1)])else 0
+  n_ageiR23[,] <- if (i>1) Binomial(R23[max(1,i-1),j] , p_aging[max(1,i-1)])else 0
+  n_ageiE24[,] <- if (i>1) Binomial(E24[max(1,i-1),j] , p_aging[max(1,i-1)])else 0
+  n_ageiI24[,] <- if (i>1) Binomial(I24[max(1,i-1),j] , p_aging[max(1,i-1)])else 0
+  n_ageiA24[,] <- if (i>1) Binomial(A24[max(1,i-1),j] , p_aging[max(1,i-1)])else 0
+  n_ageiR24[,] <- if (i>1) Binomial(R24[max(1,i-1),j] , p_aging[max(1,i-1)])else 0
+  n_ageiE34[,] <- if (i>1) Binomial(E34[max(1,i-1),j] , p_aging[max(1,i-1)])else 0
+  n_ageiI34[,] <- if (i>1) Binomial(I34[max(1,i-1),j] , p_aging[max(1,i-1)])else 0
+  n_ageiA34[,] <- if (i>1) Binomial(A34[max(1,i-1),j] , p_aging[max(1,i-1)])else 0
+  n_ageiR34[,] <- if (i>1) Binomial(R34[max(1,i-1),j] , p_aging[max(1,i-1)])else 0
+  n_ageiE4rd[,] <- if (i>1) Binomial(E4rd[max(1,i-1),j] , p_aging[max(1,i-1)])else 0
+  n_ageiI4rd[,] <- if (i>1) Binomial(I4rd[max(1,i-1),j] , p_aging[max(1,i-1)])else 0
+  n_ageiA4rd[,] <- if (i>1) Binomial(A4rd[max(1,i-1),j] , p_aging[max(1,i-1)])else 0
+  n_ageiR4rd[,] <- if (i>1) Binomial(R4rd[max(1,i-1),j] , p_aging[max(1,i-1)])else 0
+
   
   ########### Draws from binomial distributions for numbers changing between
   ## compartments:
@@ -3042,104 +3043,104 @@ wane_jumpR12[,]<- (if ((rel_wane_strain[i, 1]+ rel_wane_strain[i, 2]) == 0)
       (if (j == 1)
         min((rel_wane_strain[i, 1]/ (rel_wane_strain[i, 1]+ rel_wane_strain[i, 2])),
             as.numeric(1)) else
-            1-wane_jumpR12[i,j-1]))
+            1-wane_jumpR12[i,max(1,j-1)]))
 
 wane_jumpR13[,]<- (if ((rel_wane_strain[i, 1]+ rel_wane_strain[i, 3]) == 0)
       (if (j == 1) 1 else 0) else
       (if (j == 1)
         min((rel_wane_strain[i, 1]/ (rel_wane_strain[i, 1]+ rel_wane_strain[i, 3])),
             as.numeric(1)) else
-            1-wane_jumpR13[i,j-1]))
+            1-wane_jumpR13[i,max(1,j-1)]))
 
 wane_jumpR14[,]<- (if ((rel_wane_strain[i, 1]+ rel_wane_strain[i, 4]) == 0)
       (if (j == 1) 1 else 0) else
       (if (j == 1)
         min((rel_wane_strain[i, 1]/ (rel_wane_strain[i, 1]+ rel_wane_strain[i, 4])),
             as.numeric(1)) else
-            1-wane_jumpR14[i,j-1]))
+            1-wane_jumpR14[i,max(1,j-1)]))
 
 wane_jumpR23[,]<- (if ((rel_wane_strain[i, 2]+ rel_wane_strain[i, 3])== 0)
       (if (j == 1) 1 else 0) else
       (if (j == 1)
         min((rel_wane_strain[i, 2]/ (rel_wane_strain[i, 2]+ rel_wane_strain[i, 3])),
             as.numeric(1)) else
-            1-wane_jumpR23[i,j-1]))
+            1-wane_jumpR23[i,max(1,j-1)]))
 
 wane_jumpR24[,]<- (if ((rel_wane_strain[i, 2]+ rel_wane_strain[i, 4]) == 0)
       (if (j == 1) 1 else 0) else
       (if (j == 1)
         min((rel_wane_strain[i, 2]/ (rel_wane_strain[i, 2]+ rel_wane_strain[i, 4])),
             as.numeric(1)) else
-            1-wane_jumpR24[i,j-1]))
+            1-wane_jumpR24[i,max(1,j-1)]))
 
 wane_jumpR34[,]<- (if ((rel_wane_strain[i, 3]+ rel_wane_strain[i, 4]) == 0)
       (if (j == 1) 1 else 0) else
       (if (j == 1)
         min((rel_wane_strain[i, 3]/ (rel_wane_strain[i, 3]+ rel_wane_strain[i, 4])),
             as.numeric(1)) else
-            1-wane_jumpR34[i,j-1]))
+            1-wane_jumpR34[i,max(1,j-1)]))
 
 
 n_R12_1_2nd[,]<- if (sum(wane_jumpR12[i,]) == 0) 
 (if (j == 1) 1 else 0) else 
 ( if(j==1) Binomial(n_R12_wane[i,1],wane_jumpR12[i,j]) 
-else n_R12_wane[i,1]-n_R12_1_2nd[i,j-1])
+else n_R12_wane[i,1]-n_R12_1_2nd[i,max(1,j-1)])
 
 n_R12_2_2nd[,]<- if (sum(wane_jumpR12[i,]) == 0) 
 (if (j == 1) 1 else 0) else 
 ( if(j==1) Binomial(n_R12_wane[i,2],wane_jumpR12[i,j]) else
-n_R12_wane[i,2]-n_R12_2_2nd[i,j-1])
+n_R12_wane[i,2]-n_R12_2_2nd[i,max(1,j-1)])
 
 
 n_R13_1_2nd[,]<-if (sum(wane_jumpR13[i,]) == 0) 
 (if (j == 1) 1 else 0) else 
 ( if(j==1) Binomial(n_R13_wane[i,1],wane_jumpR13[i,j]) else
-n_R13_wane[i,1]-n_R13_1_2nd[i,j-1])
+n_R13_wane[i,1]-n_R13_1_2nd[i,max(1,j-1)])
 
 n_R13_2_2nd[,]<-if (sum(wane_jumpR13[i,]) == 0) 
 (if (j == 1) 1 else 0) else 
 ( if(j==1) Binomial(n_R13_wane[i,2],wane_jumpR13[i,j]) else
-n_R13_wane[i,2]-n_R13_2_2nd[i,j-1])
+n_R13_wane[i,2]-n_R13_2_2nd[i,max(1,j-1)])
 
 n_R14_1_2nd[,]<-if (sum(wane_jumpR14[i,]) == 0) 
 (if (j == 1) 1 else 0) else 
 ( if(j==1) Binomial(n_R14_wane[i,1],wane_jumpR14[i,j]) else
-n_R14_wane[i,1]-n_R14_1_2nd[i,j-1])
+n_R14_wane[i,1]-n_R14_1_2nd[i,max(1,j-1)])
 
 n_R14_2_2nd[,]<-if (sum(wane_jumpR14[i,]) == 0) 
 (if (j == 1) 1 else 0) else 
 ( if(j==1) Binomial(n_R14_wane[i,2],wane_jumpR14[i,j]) else
-n_R14_wane[i,2]-n_R14_2_2nd[i,j-1])
+n_R14_wane[i,2]-n_R14_2_2nd[i,max(1,j-1)])
 
 n_R23_1_2nd[,]<-if (sum(wane_jumpR23[i,]) == 0) 
 (if (j == 1) 1 else 0) else 
 ( if(j==1) Binomial(n_R23_wane[i,1],wane_jumpR23[i,j]) else
-n_R23_wane[i,1]-n_R23_1_2nd[i,j-1])
+n_R23_wane[i,1]-n_R23_1_2nd[i,max(1,j-1)])
 
 n_R23_2_2nd[,]<-if (sum(wane_jumpR23[i,]) == 0) 
 (if (j == 1) 1 else 0) else 
 ( if(j==1) Binomial(n_R23_wane[i,2],wane_jumpR23[i,j]) else
-n_R23_wane[i,2]-n_R23_2_2nd[i,j-1])
+n_R23_wane[i,2]-n_R23_2_2nd[i,max(1,j-1)])
 
 n_R24_1_2nd[,]<-if (sum(wane_jumpR24[i,]) == 0) 
 (if (j == 1) 1 else 0) else 
 ( if(j==1) Binomial(n_R24_wane[i,1],wane_jumpR24[i,j]) else
-n_R24_wane[i,1]-n_R24_1_2nd[i,j-1])
+n_R24_wane[i,1]-n_R24_1_2nd[i,max(1,j-1)])
 
 n_R24_2_2nd[,]<-if (sum(wane_jumpR24[i,]) == 0) 
 (if (j == 1) 1 else 0) else 
 ( if(j==1) Binomial(n_R24_wane[i,2],wane_jumpR24[i,j]) else
-n_R24_wane[i,2]-n_R24_2_2nd[i,j-1])
+n_R24_wane[i,2]-n_R24_2_2nd[i,max(1,j-1)])
 
 n_R34_1_2nd[,]<-if (sum(wane_jumpR34[i,]) == 0) 
 (if (j == 1) 1 else 0) else 
 ( if(j==1) Binomial(n_R34_wane[i,1],wane_jumpR34[i,j]) else
-n_R34_wane[i,1]-n_R34_1_2nd[i,j-1])
+n_R34_wane[i,1]-n_R34_1_2nd[i,max(1,j-1)])
 
 n_R34_2_2nd[,]<-if (sum(wane_jumpR34[i,]) == 0) 
 (if (j == 1) 1 else 0) else 
 ( if(j==1) Binomial(n_R34_wane[i,2],wane_jumpR34[i,j]) else
-n_R34_wane[i,2]-n_R34_2_2nd[i,j-1])
+n_R34_wane[i,2]-n_R34_2_2nd[i,max(1,j-1)])
 
 
 # Split wane into possible strain histories
